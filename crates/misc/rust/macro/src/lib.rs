@@ -137,7 +137,7 @@ fn generate_methods(item: &syn::ItemTrait) -> syn::Result<TokenStream> {
             }
             let ident = &ident.ident;
             args.push(quote! {
-                #root::wasmtime_interface_types::Value::from(#ident)
+                #root::wasmtime::Val::from(#ident)
             });
         }
 
